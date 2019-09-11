@@ -239,6 +239,147 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://timidenotes.github.io/2019/09/11/reinstall-hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Timmy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Just for notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/11/reinstall-hexo/" itemprop="url">reinstall_hexo</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2019-09-11T15:37:01+08:00">
+                2019-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Local-files-are-different-to-the-files-on-github-so-if-I-need-to-backup-or-restore-my-github-page-need-to-copy-Local-files"><a href="#Local-files-are-different-to-the-files-on-github-so-if-I-need-to-backup-or-restore-my-github-page-need-to-copy-Local-files" class="headerlink" title="Local files are different to the files on github, so if I need to backup or restore my github page, need to copy Local files."></a>Local files are different to the files on github, so if I need to backup or restore my github page, need to copy Local files.</h3><h1 id="copy-files-list"><a href="#copy-files-list" class="headerlink" title="copy files list"></a>copy files list</h1><ol>
+<li>_config.yml</li>
+<li>package.json</li>
+<li>scaffolds/</li>
+<li>source/</li>
+<li>themes/</li>
+</ol>
+<h2 id="new-computer-setting"><a href="#new-computer-setting" class="headerlink" title="new computer setting"></a>new computer setting</h2><ol>
+<li>install git</li>
+<li>install node.js</li>
+<li>install hexo</li>
+<li>cd to the folder</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo -g</span><br><span class="line">npm install</span><br><span class="line">npm --save install hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<h2 id="new-computer-git-setting"><a href="#new-computer-git-setting" class="headerlink" title="new computer git setting"></a>new computer git setting</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name your_user_name</span><br><span class="line">git config --global user.email your_user_email</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>(no need to set password)</p>
+</blockquote>
+<h2 id="rsa"><a href="#rsa" class="headerlink" title="rsa"></a>rsa</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_user_mail"</span></span><br><span class="line"><span class="comment">#generate rsa key</span></span><br><span class="line">cat /home/your_user_name/.ssh/id_rsa.pub</span><br><span class="line"><span class="comment">#show rsa</span></span><br><span class="line">ssh -T git@github.com</span><br><span class="line"><span class="comment">#after paste to github, check rsa setting is done</span></span><br></pre></td></tr></table></figure>
+<h2 id="under-your-folder"><a href="#under-your-folder" class="headerlink" title="under your folder"></a>under your folder</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1 id="DONE"><a href="#DONE" class="headerlink" title="DONE!"></a>DONE!</h1><hr>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>[<a href="https://850552586.github.io/2018/11/14/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E6%97%B6%E8%BD%AC%E7%A7%BBhexo%E5%8D%9A%E5%AE%A2/]" target="_blank" rel="noopener">https://850552586.github.io/2018/11/14/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E6%97%B6%E8%BD%AC%E7%A7%BBhexo%E5%8D%9A%E5%AE%A2/]</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://timidenotes.github.io/2019/02/27/雜記/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1354,125 +1495,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://timidenotes.github.io/2018/04/18/JavaScript-Variables/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Timmy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Just for notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/18/JavaScript-Variables/" itemprop="url">JavaScript_Variables</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-04-18T19:28:19+08:00">
-                2018-04-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="comment">//constant, can not change</span></span><br><span class="line"><span class="keyword">let</span> <span class="comment">//can change</span></span><br><span class="line"><span class="keyword">let</span> notDefined;</span><br><span class="line"><span class="comment">// variab can be undefined</span></span><br><span class="line"><span class="keyword">let</span> myPet = <span class="string">'armadillo'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`I own a pet <span class="subst">$&#123;myPet&#125;</span>.`</span>)</span><br><span class="line"><span class="comment">//I own a pet armadillo.</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Instead of using quotes around the string, use backticks</span></span><br><span class="line"><span class="comment">Wrap your variable with $&#123;myVariable&#125;, followed by a sentence. No +s necessary.</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1523,7 +1545,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -1536,7 +1558,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
