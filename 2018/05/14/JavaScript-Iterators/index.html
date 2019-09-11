@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JavaScript,codecademy,Array,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Just for notes">
-<meta property="og:url" content="https://timidenotes.github.io/page/2/index.html">
+<meta name="description" content="Documentation A short definition A block with the correct syntax for using the method A list of parameters the method accepts or requires The return value of the function An extended description Examp">
+<meta name="keywords" content="JavaScript,codecademy,Array">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript_Iterators">
+<meta property="og:url" content="https://timidenotes.github.io/2018/05/14/JavaScript-Iterators/index.html">
 <meta property="og:site_name" content="Just for notes">
+<meta property="og:description" content="Documentation A short definition A block with the correct syntax for using the method A list of parameters the method accepts or requires The return value of the function An extended description Examp">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-05-14T06:23:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Just for notes">
+<meta name="twitter:title" content="JavaScript_Iterators">
+<meta name="twitter:description" content="Documentation A short definition A block with the correct syntax for using the method A list of parameters the method accepts or requires The return value of the function An extended description Examp">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://timidenotes.github.io/page/2/">
+  <link rel="canonical" href="https://timidenotes.github.io/2018/05/14/JavaScript-Iterators/">
 
 
 
 
 
-  <title>Just for notes</title>
+  <title>JavaScript_Iterators | Just for notes</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,9 +228,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -239,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://timidenotes.github.io/2018/04/17/hexo-github-page-notes/">
+    <link itemprop="mainEntityOfPage" href="https://timidenotes.github.io/2018/05/14/JavaScript-Iterators/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Timmy">
@@ -256,9 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/17/hexo-github-page-notes/" itemprop="url">hexo + github page = notes</a></h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript_Iterators</h1>
         
 
         <div class="post-meta">
@@ -270,8 +272,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-04-17T22:21:22+08:00">
-                2018-04-17
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-05-14T20:34:49+08:00">
+                2018-05-14
               </time>
             
 
@@ -308,21 +310,29 @@
       
 
       
-        
-          <h3 id="github-pages"><a href="#github-pages" class="headerlink" title="github pages"></a>github pages</h3><ol>
-<li>申請githbu帳號</li>
-<li>建立repository, 名稱是“username.githubt.io”</li>
-<li>上傳一個index.html</li>
-<li><a href="https://username.github.io" target="_blank" rel="noopener">https://username.github.io</a></li>
+        <h3 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h3><ol>
+<li>A short definition</li>
+<li>A block with the correct syntax for using the method</li>
+<li>A list of parameters the method accepts or requires</li>
+<li>The return value of the function</li>
+<li>An extended description</li>
+<li>Examples of the method’s use</li>
+<li>Polyfill, Specifications, Browser Compatibility</li>
 </ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/17/hexo-github-page-notes/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<a id="more"></a>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title=".forEach()"></a>.forEach()</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> groceries = [<span class="string">'whole wheat flour'</span>, <span class="string">'brown sugar'</span>, <span class="string">'salt'</span>, <span class="string">'cranberries'</span>, <span class="string">'walnuts'</span>]; </span><br><span class="line"></span><br><span class="line">groceries.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">groceryItem</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">' - '</span> + groceryItem);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">groceries.forEach(<span class="function"><span class="params">groceryItem</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">' - '</span> + groceryItem));</span><br></pre></td></tr></table></figure>
+<ul>
+<li>It is an array method. It must be called upon an array.</li>
+<li>Any changes to the iterated array value won’t be updated in the original array.</li>
+<li>The return value is undefined.</li>
+</ul>
+<h3 id="map"><a href="#map" class="headerlink" title=".map()"></a>.map()</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]; </span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> bigNumbers = numbers.map(<span class="function"><span class="keyword">function</span>(<span class="params">number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> number * <span class="number">10</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> bigNumbers = numbers.map(<span class="function"><span class="params">number</span> =&gt;</span> number * <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>.map() returns a new array with elements that have been modified by the code in its block.</li>
+</ul>
+<h3 id="filter"><a href="#filter" class="headerlink" title=".filter()"></a>.filter()</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> words = [<span class="string">'chair'</span>, <span class="string">'music'</span>, <span class="string">'pillow'</span>, <span class="string">'brick'</span>, <span class="string">'pen'</span>, <span class="string">'door'</span>]; </span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> shortWords = words.filter(<span class="function"><span class="keyword">function</span>(<span class="params">word</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> word.length &lt; <span class="number">6</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> shortWords = words.filter(<span class="function"><span class="params">word</span> =&gt;</span> word.length &lt; <span class="number">6</span>);</span><br></pre></td></tr></table></figure>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank" rel="noopener"> Mozilla Developer Network (MDN)</a></p>
+
       
     </div>
     
@@ -337,133 +347,44 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://timidenotes.github.io/2018/04/17/Introduction-to-JavaScript/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Timmy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Just for notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/17/Introduction-to-JavaScript/" itemprop="url">Introduction to JavaScript</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-04-17T00:03:19+08:00">
-                2018-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            
+            <a href="/tags/codecademy/" rel="tag"># codecademy</a>
           
-
+            <a href="/tags/Array/" rel="tag"># Array</a>
           
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hello'</span>.length);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hello'</span>.toUpperCase()); <span class="comment">// 'HELLO' </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hey'</span>.startsWith(<span class="string">'H'</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'    Remove whitespace   '</span>.trim()); </span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.random()); <span class="comment">// random number between 0 and 1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">100</span>));</span><br><span class="line"><span class="comment">//Math.random generates a random number between 0 and 1.</span></span><br><span class="line"><span class="comment">//Math.floor rounds the number down to the nearest whole number.</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.ceil(<span class="number">43.8</span>));</span><br><span class="line"><span class="comment">//the smallest integer greater than or equal to a decimal number</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>.isInteger(<span class="number">2017</span>));</span><br><span class="line"><span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/27/JavaScript-Loops/" rel="next" title="JavaScript_Loops">
+                <i class="fa fa-chevron-left"></i> JavaScript_Loops
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/27/雜記/" rel="prev" title="雜記">
+                雜記 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -473,14 +394,11 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -488,6 +406,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -508,8 +430,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -560,6 +491,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Documentation"><span class="nav-number">1.</span> <span class="nav-text">Documentation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forEach"><span class="nav-number">2.</span> <span class="nav-text">.forEach()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-number">3.</span> <span class="nav-text">.map()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">4.</span> <span class="nav-text">.filter()</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -693,6 +640,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

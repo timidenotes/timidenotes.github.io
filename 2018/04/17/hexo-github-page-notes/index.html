@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="git,github,github_page,github_ssh,hexo,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Just for notes">
-<meta property="og:url" content="https://timidenotes.github.io/page/2/index.html">
+<meta name="description" content="github pages 申請githbu帳號 建立repository, 名稱是“username.githubt.io” 上傳一個index.html https://username.github.io">
+<meta name="keywords" content="git,github,github_page,github_ssh,hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo + github page = notes">
+<meta property="og:url" content="https://timidenotes.github.io/2018/04/17/hexo-github-page-notes/index.html">
 <meta property="og:site_name" content="Just for notes">
+<meta property="og:description" content="github pages 申請githbu帳號 建立repository, 名稱是“username.githubt.io” 上傳一個index.html https://username.github.io">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-02-26T12:28:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Just for notes">
+<meta name="twitter:title" content="hexo + github page = notes">
+<meta name="twitter:description" content="github pages 申請githbu帳號 建立repository, 名稱是“username.githubt.io” 上傳一個index.html https://username.github.io">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://timidenotes.github.io/page/2/">
+  <link rel="canonical" href="https://timidenotes.github.io/2018/04/17/hexo-github-page-notes/">
 
 
 
 
 
-  <title>Just for notes</title>
+  <title>hexo + github page = notes | Just for notes</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,9 +228,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -256,9 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/17/hexo-github-page-notes/" itemprop="url">hexo + github page = notes</a></h1>
+          <h1 class="post-title" itemprop="name headline">hexo + github page = notes</h1>
         
 
         <div class="post-meta">
@@ -308,21 +310,49 @@
       
 
       
-        
-          <h3 id="github-pages"><a href="#github-pages" class="headerlink" title="github pages"></a>github pages</h3><ol>
+        <h3 id="github-pages"><a href="#github-pages" class="headerlink" title="github pages"></a>github pages</h3><ol>
 <li>申請githbu帳號</li>
 <li>建立repository, 名稱是“username.githubt.io”</li>
 <li>上傳一個index.html</li>
 <li><a href="https://username.github.io" target="_blank" rel="noopener">https://username.github.io</a></li>
 </ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/17/hexo-github-page-notes/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<a id="more"></a>
+<hr>
+<h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><ol>
+<li>安裝(前置：node.js、git)</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>cd到github page的目錄下(原有資料即可跳過此步)</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>設定(_config.yml)</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repo:</span> <span class="attr">https://github.com/username/username.github.io.git</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:year-:month-:day-:title.md</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>發布(clean很重要)</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy --generate</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="github-ssh"><a href="#github-ssh" class="headerlink" title="github ssh"></a>github ssh</h3><ol>
+<li>brew install git (macOS)</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"username"</span></span><br><span class="line">git config --global user.email <span class="string">"usermail@mail.com"</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>生成ssh密鑰文件、複製</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"usermail@mail.com"</span></span><br><span class="line">pbcopy &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>github settings新增ssh key</li>
+</ol>
+<hr>
+<h3 id="git-command-line"><a href="#git-command-line" class="headerlink" title="git command line"></a>git command line</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span></span><br><span class="line"><span class="built_in">clone</span>下來別人的專案到<span class="built_in">local</span>端</span><br><span class="line">git init</span><br><span class="line">創建一個新的Repository (打開任何一個專案資料夾打上git init)</span><br><span class="line">add add 主檔名.副檔名</span><br><span class="line">將檔案提交入Staging Areagit add 整個資料夾提交入Staging Area </span><br><span class="line">git commit -m <span class="string">'註解'</span></span><br><span class="line">(必要)</span><br><span class="line">將檔案提交入Repository git commit -e 能用編輯器撰寫多行解說文字</span><br><span class="line">git rm --cached 檔案名稱</span><br><span class="line">將不在Repository的檔案移出Staging Area</span><br><span class="line">git reset HEAD</span><br><span class="line">將已經在Repository的檔案移出Staging Area</span><br><span class="line">git status</span><br><span class="line">查看目前檔案的狀態</span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line">查看目前所有commit的歷史紀錄</span><br><span class="line">git remote add origin git@github.com:kaochenlong/practice-git.git</span><br><span class="line">git remote 指令，顧名思義，主要是跟遠端有關的操作。</span><br><span class="line">add 指令是指要加入一個遠端的節點。</span><br><span class="line">在這裡的 origin 是一個「代名詞」，指的是後面那串 GitHub 伺服器的位置。</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>github desktop 和 git 可以分別使用不同的帳號 不會互相影響</strong><br><strong>可以先把網頁創好 push上github 之後再deploy</strong></p>
+<hr>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/26625249</a><br><a href="https://www.jianshu.com/p/834d7cc0668d" target="_blank" rel="noopener">https://www.jianshu.com/p/834d7cc0668d</a><br><a href="https://alumincan.github.io/2017/03/28/setup-blog-on-github/" target="_blank" rel="noopener">https://alumincan.github.io/2017/03/28/setup-blog-on-github/</a><br><a href="https://swiftcafe.io/post/github-user.md" target="_blank" rel="noopener">https://swiftcafe.io/post/github-user.md</a><br><a href="https://hellolynn.hpd.io/2017/01/18/git%E6%96%B0%E6%89%8B%E5%85%A5%E9%96%80%E6%95%99%E5%AD%B8-part-1/" target="_blank" rel="noopener">https://hellolynn.hpd.io/2017/01/18/git%E6%96%B0%E6%89%8B%E5%85%A5%E9%96%80%E6%95%99%E5%AD%B8-part-1/</a><br><a href="https://gitbook.tw/chapters/github/push-to-github.html" target="_blank" rel="noopener">https://gitbook.tw/chapters/github/push-to-github.html</a></p>
+
       
     </div>
     
@@ -337,133 +367,48 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://timidenotes.github.io/2018/04/17/Introduction-to-JavaScript/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Timmy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Just for notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/17/Introduction-to-JavaScript/" itemprop="url">Introduction to JavaScript</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-04-17T00:03:19+08:00">
-                2018-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/git/" rel="tag"># git</a>
           
-            
+            <a href="/tags/github/" rel="tag"># github</a>
           
-
+            <a href="/tags/github-page/" rel="tag"># github_page</a>
           
+            <a href="/tags/github-ssh/" rel="tag"># github_ssh</a>
           
-
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hello'</span>.length);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hello'</span>.toUpperCase()); <span class="comment">// 'HELLO' </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hey'</span>.startsWith(<span class="string">'H'</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'    Remove whitespace   '</span>.trim()); </span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.random()); <span class="comment">// random number between 0 and 1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">100</span>));</span><br><span class="line"><span class="comment">//Math.random generates a random number between 0 and 1.</span></span><br><span class="line"><span class="comment">//Math.floor rounds the number down to the nearest whole number.</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.ceil(<span class="number">43.8</span>));</span><br><span class="line"><span class="comment">//the smallest integer greater than or equal to a decimal number</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>.isInteger(<span class="number">2017</span>));</span><br><span class="line"><span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/17/Introduction-to-JavaScript/" rel="next" title="Introduction to JavaScript">
+                <i class="fa fa-chevron-left"></i> Introduction to JavaScript
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/18/JavaScript-Variables/" rel="prev" title="JavaScript_Variables">
+                JavaScript_Variables <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -473,14 +418,11 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -488,6 +430,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -508,8 +454,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -560,6 +515,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#github-pages"><span class="nav-number">1.</span> <span class="nav-text">github pages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo"><span class="nav-number">2.</span> <span class="nav-text">hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github-ssh"><span class="nav-number">3.</span> <span class="nav-text">github ssh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-command-line"><span class="nav-number">4.</span> <span class="nav-text">git command line</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -693,6 +664,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
